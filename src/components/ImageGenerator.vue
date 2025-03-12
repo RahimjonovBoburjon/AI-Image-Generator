@@ -11,7 +11,7 @@
         <div v-if="imageUrl" class="mt-4">
             <img :src="imageUrl" alt="Generated Image" class="w-full rounded-lg shadow-lg" />
             <a :href="imageUrl" download="generated-image.jpg" class="mt-2 inline-block text-blue-400 underline">
-                Download Image
+                Download Image ☁️
             </a>
         </div>
     </div>
@@ -25,27 +25,39 @@ const imageUrl = ref("");
 const loading = ref(false);
 
 const generateImage = async () => {
-    if (!prompt.value) return;
+    if (!prompt.value.trim()) {
+        alert("Prompt is required!");
+        return;
+    }
+
     loading.value = true;
 
+    const formData = new FormData();
+    formData.append("prompt", prompt.value);
+    formData.append("width", 1024);
+    formData.append("height", 1024);
+    formData.append("steps", 50);
+    formData.append("cfg_scale", 7.5);
+    formData.append("samples", 1);
+
     try {
-        const response = await fetch("https://api.openai.com/v1/images/generations", {
+        const response = await fetch("https://api.stability.ai/v2beta/stable-image/generate/sd3", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer `,
+                "Authorization": `Bearer ${import.meta.env.VITE_STABILITY_API_KEY}`,
+                "Accept": "image/*"
             },
-            body: JSON.stringify({
-                prompt: prompt.value,
-                n: 1,
-                size: "512x512",
-            }),
+            body: formData,
         });
 
-        const data = await response.json();
-        imageUrl.value = data.data[0].url;
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+
+        imageUrl.value = url;
+
     } catch (error) {
         console.error("Error generating image:", error);
+        alert("Failed to generate image: " + error.message);
     }
 
     loading.value = false;
