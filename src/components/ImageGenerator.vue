@@ -33,7 +33,7 @@ const generateImage = async () => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer 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`,
+                "Authorization": `Bearer `,
             },
             body: JSON.stringify({
                 prompt: prompt.value,
