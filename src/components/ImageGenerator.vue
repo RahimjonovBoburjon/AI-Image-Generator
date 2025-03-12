@@ -29,14 +29,21 @@ const generateImage = async () => {
     loading.value = true;
 
     try {
-        const response = await fetch("https://api.example.com/generate", {
+        const response = await fetch("https://api.openai.com/v1/images/generations", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ prompt: prompt.value }),
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer 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`,
+            },
+            body: JSON.stringify({
+                prompt: prompt.value,
+                n: 1,
+                size: "512x512",
+            }),
         });
 
         const data = await response.json();
-        imageUrl.value = data.image_url;
+        imageUrl.value = data.data[0].url;
     } catch (error) {
         console.error("Error generating image:", error);
     }
