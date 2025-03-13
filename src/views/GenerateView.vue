@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+    <div class="w-1/4 flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
         <h1 class="text-3xl font-bold mb-6">Generate AI Images</h1>
         <ImageGenerator />
     </div>
