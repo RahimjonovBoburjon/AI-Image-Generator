@@ -13,3 +13,11 @@ It supports **OpenAI (DALL·E 3)** and **Stability AI** APIs for image generatio
 ✅ User-friendly and responsive UI  
 
 ---
+
+## 🚀 **Getting Started**  
+
+### 1️⃣ **Clone the Repository & Navigate to the Project Folder**  
+
+```sh
+git clone https://github.com/RahimjonovBoburjon/AI-Image-Generator.git
+cd repository
