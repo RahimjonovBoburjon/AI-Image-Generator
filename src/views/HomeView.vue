@@ -1,7 +1,6 @@
 <template>
     <div
-        class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col items-center justify-center p-6 relative overflow-hidden">
-        <!-- Animated background elements -->
+        class="w-full min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col items-center justify-center p-6 relative overflow-hidden">
         <div
             class="absolute w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-float">
         </div>
@@ -9,16 +8,13 @@
             class="absolute w-80 h-80 bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full blur-2xl animate-float-delayed">
         </div>
 
-        <!-- Main content container -->
         <div
             class="relative z-10 max-w-4xl text-center backdrop-blur-lg bg-gray-900/50 rounded-2xl p-12 border border-gray-700/30 shadow-2xl transform transition-all hover:bg-gray-900/60">
-            <!-- Heading with gradient text -->
             <h1
                 class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent animate-text-shine">
                 Unleash AI Creativity
             </h1>
 
-            <!-- Subtitle with animated border -->
             <div class="mt-6 inline-block relative group">
                 <p class="text-xl text-gray-300 font-medium transition-all duration-300 group-hover:text-gray-100">
                     Transform Words into Stunning Visual Masterpieces
@@ -30,7 +26,6 @@
 
             <br>
 
-            <!-- Enhanced CTA button -->
             <RouterLink to="/generate"
                 class="mt-10 inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:from-blue-400 hover:to-purple-400 group">
                 <svg class="w-6 h-6 text-white animate-pulse group-hover:animate-spin" fill="none" stroke="currentColor"
@@ -43,7 +38,6 @@
                     class="absolute inset-0 bg-gradient-to-r from-blue-400/30 to-purple-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
             </RouterLink>
 
-            <!-- Additional info text -->
             <p class="mt-8 text-sm text-gray-400 font-medium">
                 Powered by Stable Diffusion 3 & GPT-4 Vision
                 <span class="mx-2">⚡</span>
