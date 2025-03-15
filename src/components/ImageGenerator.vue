@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 rounded-2xl shadow-2xl space-y-6 transform transition-all duration-300 hover:shadow-3xl">
+        class="w-1/3 max-lg:w-3/4 max-sm:w-11/12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 rounded-2xl shadow-2xl space-y-6 transform transition-all duration-300 hover:shadow-3xl">
         <div class="relative group">
             <input v-model="prompt" type="text" placeholder=" "
                 class="w-full p-4 text-lg bg-gray-700/30 backdrop-blur-sm rounded-xl border-2 border-gray-600/50 focus:border-blue-500/80 outline-none text-white placeholder-transparent transition-all duration-300 peer"
