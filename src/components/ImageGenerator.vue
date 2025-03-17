@@ -7,7 +7,7 @@
                 @keyup.enter="generateImage" />
             <label
                 class="absolute left-4 -top-5 px-1 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text text-sm opacity-80 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-4 peer-placeholder-shown:left-4 peer-focus:-top-5 peer-focus:text-sm peer-focus:text-blue-500 transition-all duration-300 pointer-events-none">
-                AI ga izohingizni kiriting...
+                Enter your comment to AI...
             </label>
         </div>
 
@@ -19,7 +19,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                {{ loading ? 'Yaratilmoqda...' : 'Tasvir yaratish' }}
+                {{ loading ? 'Creating...' : 'Creating an image' }}
             </span>
             <div
                 class="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -43,7 +43,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
-                    Yuklab olish
+                    Download
                 </a>
             </div>
         </transition>
