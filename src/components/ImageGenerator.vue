@@ -32,7 +32,7 @@
             <div v-if="imageUrl" class="mt-6 space-y-4">
                 <div class="relative group">
                     <img :src="imageUrl" alt="Generated Image"
-                        class="w-full rounded-xl shadow-xl transform transition-transform duration-300 group-hover:scale-[1.02] cursor-zoom-in" />
+                        class="w-full rounded-xl shadow-xl transform transition-transform duration-300 group-hover:scale-[1.02]" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent rounded-xl pointer-events-none" />
                 </div>
